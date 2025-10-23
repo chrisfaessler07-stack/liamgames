@@ -1,0 +1,364 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('Background.png'); /* percorso dell’immagine */
+  background-size: cover; /* riempie tutto lo schermo */
+  background-position: center; /* centra l’immagine */
+  background-repeat: no-repeat; /* evita ripetizioni */
+  height: 100vh; /* assicura che copra tutta la finestra */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.main-header {
+  width: 100%;
+  background-color: #1fa5c7; /* sfondo barra */
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar a {
+  font-family: Arial, Helvetica, sans-serif; /* font richiesto */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px; /* crea la casella */
+  background-color: rgba(0, 0, 0, 0.2); /* semi-trasparente */
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 20px;
+  padding: 6px 12px; /* meno verticale e orizzontale → casella più sottile */
+}
+
+.navbar a:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* più scura al passaggio del mouse */
+  color: #008cff; /* colore testo al passaggio del mouse */
+}
+
+
+
+
+/* Sidebar */
+.sidebar {
+  text-align: center;
+  height: 100%;
+  width: 0; /* chiusa all’inizio */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #4598be;
+  color: white;
+  overflow-x: hidden;
+  transition: width 0.4s ease;
+  padding-top: 60px;
+  z-index: 2000;
+}
+
+.sidebar a {
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #1e90ff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* headers*/
+
+  .main-header{
+    text-align: center;
+  }
+
+  .secondary-header {
+    text-align: center;
+    background-color: #abd6f3;
+    color: rgba(0, 0, 0, 0.712);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* portofolio */
+
+  .intro-portfolio {
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+
+  .portfolio-link {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .portfolio-link:hover {
+    color: #63b3ed;
+    text-decoration: underline;
+  }
+
+  /* h */
+
+  h1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;                      
+    font-size: 24px;                        
+    margin-bottom: 8px;
+  }
+
+
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+  } 
+
+  p {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300;                
+    font-size: 16px;                 
+    line-height: 1.5;                   
+    margin-bottom: 15px;
+  }
+  a {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300;                
+    font-size: 16px;                 
+    line-height: 1.5;                   
+    margin-bottom: 12px;
+  }
+
+  /* caselle dei giochi */
+
+  .game-card {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 250px;
+    margin: 45px;         
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #abd6f3;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(20px); /* leggero spostamento verso il basso */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .game-card.visible {
+    opacity: 1;
+    transform: translateY(0); /* torna nella posizione originale */
+  }
+
+
+  .game-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .play-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: black;
+    color: rgb(248, 248, 248);
+    text-decoration: none;
+    border-radius: 8px;
+  }
+    
+
+  .games-container {
+    text-align: center; 
+  }
+
+  .games {
+    text-align: center; 
+  }
+
+
+  /* footer */
+  
+  footer {
+    background-color: #222;    
+    color: #f0f0f0;              
+    text-align: center;          
+    padding: 20px 0;           
+    font-family: 'Arial', sans-serif;
+    border-top: 2px solid #444;  
+    border-radius: 10px;   
+  }
+
+  footer a {
+    color: #1e90ff;        
+    text-decoration: none;
+    transition: color 0.3s; 
+  }
+
+  footer a:hover {
+    color: #63b3ed;   
+    text-decoration: underline; 
+    border-radius: 20px;
+  }
+
+
+
+
+.news-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.news-section h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.news-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.news-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.news-card h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.news-date {
+  display: block;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* PROVA --------------*/
+
+  .featured-games {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.featured-game {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0; /* inizialmente invisibile */
+  transform: translateY(50px);
+  transition: all 1s ease;
+  
+}
+
+.featured-game.reverse {
+  flex-direction: row-reverse;
+}
+
+.featured-game .text {
+  width: 50%;
+  padding: 20px;
+}
+
+.featured-game .image {
+  width: 50%;
+  padding: 20px;
+}
+
+.featured-game img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Classe che appare quando l'elemento entra nello viewport */
+.featured-game.visible {
+  opacity: 1;          /* diventa visibile */
+  transform: translateY(0);
+}
+
